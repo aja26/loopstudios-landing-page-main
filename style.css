@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root{
+
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--dark-gray: hsl(0, 0%, 55%);
+--very-dark-gray: hsl(0, 0%, 41%);
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    color: azure;
+    font-family: 'Alata', sans-serif;
+}
+
+main{
+    display: grid;
+}
+
+header{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    background-image: url('images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header::before{
+    position: absolute;
+    content: '';
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 90vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.header-container{
+    height: 90vh;
+    z-index: 1;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 0.5fr 4.5fr;
+    height: 80px;
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+nav{
+    display: grid;
+    height: 2rem;
+}
+
+ul{
+    display: grid;
+    justify-self: right;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: auto;
+    gap: 1rem;
+}
+
+li{
+    display: inline-block;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 4.5rem;
+    font-weight: 300;
+    border: 2px solid var(--white);
+    padding: 2.5rem; 
+    width: 40rem;
+    height: 18rem;
+    margin-bottom: 0px;
+}
+
+/* Mobile */
+
+@media (max-width:780px){
+    .mobile-menu{
+        display: grid;
+        height: 2rem;
+        justify-self: end;
+        align-items: center;
+    }
+
+    .mobile-menu button{
+        background: transparent;
+        border: 0;
+    }
+
+    .navigation{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav.active{
+        display: grid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    nav.active ul{
+        grid-template-columns: auto;
+        background-color: red;
+        width: 100%;
+    }
+
+    h1{
+        font-size: clamp(2rem, 9vw, 4.5rem);
+        width: 80vw;
+    }
+}
