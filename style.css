@@ -100,14 +100,13 @@ li:before {
     display: block;
     position: absolute;
     bottom: -0.5rem;
-    left: 1.35rem;
-   
 }
 
 li:hover:before {
-    background-color: red;
-    height: 0.25rem;
+    background-color: var(--white);
+    height: 0.15rem;
     width: 1.5rem;
+    left: 1.6rem;
 }
 
 .mobile-menu{
@@ -140,6 +139,7 @@ p{
     font-size: 15px;
     line-height: 1.15rem;
     font-family: 'Josefin Sans', sans-serif;
+    color: var(--very-dark-gray);
 }
 
 section{
@@ -213,6 +213,11 @@ section{
     margin-top: -0.5rem;
 }
 
+.gallery-info button:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
 .gallery{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -220,7 +225,6 @@ section{
 }
 
 .gallery article{
-    border: 1px solid var(--black);
     height: 20rem;
     color: var(--white);
     background-repeat: no-repeat;
@@ -237,6 +241,20 @@ section{
     height: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,0.7540491615853658) 0%, rgba(0,0,0,0) 100%);
     z-index: 0;
+}
+
+.gallery article:hover{
+    cursor: pointer;
+}
+
+.gallery article:hover:after{
+    background-color: rgb(255 255 255 / 65%);
+    background-blend-mode: overlay;
+}
+
+.gallery article:hover h3{
+    color: var(--black);
+    font-weight: 400;
 }
 
 article h3{
@@ -287,56 +305,88 @@ article h3{
 footer{
     background-color: var(--black);
     margin-top: 15rem;
+    color: var(--white);
+    display: grid;
+}
+
+.footer-container{
+    display: grid;
+    width: 85vw;
+    grid-template-areas: 
+    'logo social'
+    'menu copyright';
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem 0;
 }
 
 .footer-logo {
     transform: scale(0.7);
     margin-left: -1.75rem;
+    grid-area: logo;
 }
 
-.footer-top{
-    margin-top: 1rem;
-}
-
-.footer-top, .footer-bottom{
+.social{
+    grid-area: social;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    width: 85vw;
-    height: 3rem
 }
 
-.footer-bottom{
-    color: var(--white);
-    margin-top: 0.5rem;
+.social svg:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.5rem;
 }
 
-.footer-top .social{
-    justify-self: flex-end;
+.social svg:hover{
+    cursor: pointer;
 }
 
-.footer-top .social svg {
-    margin-inline: 0.35rem;
+.social ul{
+    gap: 1.5rem;
 }
 
-.footer-bottom p{
-    justify-self: flex-end;
+.social li:hover:before {
+    background-color: var(--white);
+    height: 0.15rem;
+    width: 1.5rem;
+    left: 0rem;
 }
 
-footer nav{
+.mobile-button{
+    display: none;
+}
+
+footer ul.social-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-nav{
     display: grid;
     justify-self: left;
-    margin-left: -0.5rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    grid-area:menu;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 footer ul li, footer p{
     width: auto;
     font-weight: 300;
+    text-align: center;
+}
+
+footer nav.footer-nav ul li:hover:before{
+    background-color: var(--white);
+    height: 0.15rem;
+    width: 1.5rem;
+    left: 0.65rem;
 }
 
 footer p{
     color: var(--very-dark-gray);
-    margin-top: 0.5rem;
+    margin-top: 2.5rem;
+    grid-area: copyright;
+    justify-self: flex-end;
 }
 
 /* Mobile */
@@ -372,18 +422,149 @@ footer p{
         width: 100%;
         height: 100%;
         z-index: -1;
+        background-color: var(--black);
     }
 
     nav.active ul{
-        grid-template-columns: auto;
-        background-color: var(--black);
+        grid-template-columns: 1fr;
+
         width: 100%;
-        height: 100%;
+        height: 10rem;
+        margin-top: 15rem;
+      
+    }
+
+    nav.active ul li{
+        width: 100%;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-left: 3rem;
+        text-align: left;
+    }
+
+    nav.active li:hover:before {
+        left: 0.25rem;
     }
 
     h1{
         font-size: clamp(2rem, 9vw, 4.5rem);
-        width: 80vw;
+        width: 85vw;
+        height: 15rem;
         z-index: -2;
+        padding: 2rem;
+        margin-top: -4rem;
     }
+
+    .background-image-container{
+        margin-top: 4rem;
+        background-position: center;
+    }
+
+    .text {
+        padding: 2rem 0rem;
+        width: 85vw;
+        height: 17rem;
+        left: 0rem;
+        top: 20rem;
+        text-align: center;
+        display: block;
+        position: relative;
+    }
+
+    .creations-section{
+        height: auto;
+    }
+
+    .creations-container{
+        margin-top: 12rem;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .gallery-info{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-info button{
+        display: none;
+    }
+
+    .gallery-info h2{
+        text-align: center;
+        justify-self: center;
+    }
+
+    .gallery article{
+        height: 8rem;
+    }
+
+    footer{
+        margin-top: 5rem;
+        height: 30rem;
+        padding: 3rem 0;
+    }
+
+    .mobile-button{
+        display: grid;
+        width: 10rem;
+        height: 2.5rem;
+        justify-self: center;
+        align-self: center;
+        background: transparent;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 0.25rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        padding-top: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .mobile-button:hover{
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .footer-container{
+        grid-template-areas: 
+        'logo'
+        'menu' 
+        'social'
+        'copyright'
+        ;
+
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
+    }
+
+    .footer-logo{
+        margin-left: 0;
+    }
+
+    .footer-nav{
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+    footer ul{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social{
+        margin-top: 10rem;
+    }
+
+    .footer-logo, .footer-nav, .footer p, .social{
+        justify-self: center;
+    }
+
+    footer p{
+        justify-self: center;
+    }
+
 }
