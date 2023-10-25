@@ -129,7 +129,7 @@ h1{
 h2{
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
-    font-size: 2.75rem;
+    font-size: clamp(2.35rem, 3.5vw, 3rem);
     font-weight: 300;
     padding: 0.5rem 0; 
     margin-bottom: 10px;
