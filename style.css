@@ -137,7 +137,7 @@ h2{
 
 p{
     font-size: 15px;
-    line-height: 1.15rem;
+    line-height: 1.5rem;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--very-dark-gray);
 }
@@ -171,7 +171,7 @@ section{
 }
 
 .creations-section{
-    height: 800px;
+    height: auto;
 }
 
 .creations-container{
@@ -187,7 +187,7 @@ section{
     gap: 5rem;
     width: 85vw;
     height: 5rem;
-    margin: 7rem 0rem 1rem 0;
+    margin: 10rem 0rem 4rem 0;
 }
 
 .gallery-info h2{
@@ -304,7 +304,7 @@ article h3{
 
 footer{
     background-color: var(--black);
-    margin-top: 35rem;
+    margin-top: 8rem;
     color: var(--white);
     display: grid;
 }
