@@ -156,7 +156,7 @@ section{
     background-position: left;
     width:82vw;
     height: 480px;
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
 .text {
@@ -304,7 +304,7 @@ article h3{
 
 footer{
     background-color: var(--black);
-    margin-top: 10rem;
+    margin-top: 12rem;
     color: var(--white);
     display: grid;
 }
