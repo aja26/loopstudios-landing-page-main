@@ -123,7 +123,7 @@ h1{
     padding: 2.5rem; 
     width: 40rem;
     height: 18rem;
-    margin-bottom: 0px;
+    margin-bottom: 0.5rem;
 }
 
 h2{
@@ -166,7 +166,7 @@ section{
     height: 45vh;
     position: relative;
     left: 42vw;
-    top: 11rem;
+    top: 11.2rem;
     overflow: hidden;
 }
 
