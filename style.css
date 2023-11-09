@@ -66,7 +66,7 @@ header::before{
     height: 80px;
     gap: 3rem;
     margin-top: 1.5rem;
-    width: 82vw;
+    width: 81vw;
 }
 
 nav{
@@ -154,7 +154,7 @@ section{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
-    width:82vw;
+    width:81vw;
     height: 510px;
     margin-top: 8rem;
 }
@@ -175,7 +175,7 @@ section{
 }
 
 .creations-container{
-    width:82vw;
+    width:81vw;
     display: grid;
     margin-top: 8rem;
     padding: 0;
@@ -185,7 +185,7 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    width: 82vw;
+    width: 81vw;
     height: 5rem;
     margin: 13rem 0rem 4rem 0;
 }
@@ -225,7 +225,7 @@ section{
 }
 
 .gallery article{
-    height: 27rem;
+    height: 28.5rem;
     color: var(--white);
     background-repeat: no-repeat;
     background-size: cover;
@@ -311,7 +311,7 @@ footer{
 
 .footer-container{
     display: grid;
-    width: 82vw;
+    width: 81vw;
     grid-template-areas: 
     'logo social'
     'menu copyright';
@@ -452,7 +452,7 @@ footer p{
 
     h1{
         font-size: clamp(2rem, 9vw, 4.5rem);
-        width: 82vw;
+        width: 81vw;
         height: 15rem;
         z-index: -2;
         padding: 2rem;
@@ -468,7 +468,7 @@ footer p{
 
     .text {
         padding: 2rem 0rem;
-        width: 82vw;
+        width: 81vw;
         height: 17rem;
         left: 0rem;
         top: 20rem;
