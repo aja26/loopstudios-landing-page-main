@@ -155,7 +155,7 @@ section{
     background-size: contain;
     background-position: left;
     width:82vw;
-    height: 480px;
+    height: 510px;
     margin-top: 8rem;
 }
 
@@ -166,7 +166,7 @@ section{
     height: 45vh;
     position: relative;
     left: 42vw;
-    top: 11.2rem;
+    top: 11.5rem;
     overflow: hidden;
 }
 
