@@ -568,7 +568,7 @@ footer p{
     }
 
     .footer-container{
-        grid-template-areas: 
+        grid-template-areas:
         'logo'
         'menu' 
         'social'
